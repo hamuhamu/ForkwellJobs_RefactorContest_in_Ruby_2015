@@ -53,7 +53,7 @@ class Adult
 
 end
 
-class ClassificationByAge
+class CategorizeByAge
 
   def initialize(age)
     0 <= age or raise
@@ -79,7 +79,7 @@ class ClassificationByAge
 end
 
 require 'test/unit'
-class ClassificationByAgeTest < Test::Unit::TestCase
+class CategorizeByAgeTest < Test::Unit::TestCase
 
   data(
     '0〜2才の間_下限'   => ['baby',         0],
@@ -94,12 +94,12 @@ class ClassificationByAgeTest < Test::Unit::TestCase
   )
   def test_年齢に応じた区分を返すこと(data)
     expected, age = data
-    byAge = ClassificationByAge.new(age)
+    byAge = CategorizeByAge.new(age)
     assert_equal(expected, byAge.get())
   end
 
   def test_年齢が負数であれば例外を返すこと
-    assert_raise(RuntimeError) { ClassificationByAge.new(-1) }
+    assert_raise(RuntimeError) { CategorizeByAge.new(-1) }
   end
 
 end
