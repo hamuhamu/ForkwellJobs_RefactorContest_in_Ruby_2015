@@ -1,3 +1,23 @@
+class Baby
+  NAME = 'baby'
+end
+
+class LittleChild
+  NAME = 'little child'
+end
+
+class Child
+  NAME = 'child'
+end
+
+class Youth
+  NAME = 'youth'
+end
+
+class Adult
+  NAME = 'adult'
+end
+
 class ClassificationByAge
 
   def initialize(age)
@@ -8,15 +28,15 @@ class ClassificationByAge
   def get
     case @age
     when 0..2
-      'baby'
+      Baby::NAME
     when 3..6
-      'little child'
+      LittleChild::NAME
     when 7..12
-      'child'
+      Child::NAME
     when 13..18
-      'youth'
+      Youth::NAME
     else
-      'adult'
+      Adult::NAME
     end
   end
 
