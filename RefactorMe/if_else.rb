@@ -1,21 +1,46 @@
 class Baby
   NAME = 'baby'
+
+  def self.is?
+    0..2
+  end
+
 end
 
 class LittleChild
   NAME = 'little child'
+
+  def self.is?
+    3..6
+  end
+
 end
 
 class Child
   NAME = 'child'
+
+  def self.is?
+    7..12
+  end
+
 end
 
 class Youth
   NAME = 'youth'
+
+  def self.is?
+    13..18
+  end
+
 end
 
 class Adult
   NAME = 'adult'
+
+  def self.is?
+    19...Float::INFINITY
+  end
+
 end
 
 class ClassificationByAge
@@ -26,16 +51,17 @@ class ClassificationByAge
   end
 
   def get
+
     case @age
-    when 0..2
+    when Baby.is?
       Baby::NAME
-    when 3..6
+    when LittleChild.is?
       LittleChild::NAME
-    when 7..12
+    when Child.is?
       Child::NAME
-    when 13..18
+    when Youth.is?
       Youth::NAME
-    else
+    when Adult.is?
       Adult::NAME
     end
   end
