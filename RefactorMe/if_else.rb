@@ -1,44 +1,54 @@
 class Baby
   NAME = 'baby'
+  LOWER_LIMIT = 0
+  UPPER_LIMIT = 2
 
   def self.is?
-    0..2
+    LOWER_LIMIT..UPPER_LIMIT
   end
 
 end
 
 class LittleChild
   NAME = 'little child'
+  LOWER_LIMIT = 3
+  UPPER_LIMIT = 6
 
   def self.is?
-    3..6
+    LOWER_LIMIT..UPPER_LIMIT
   end
 
 end
 
 class Child
   NAME = 'child'
+  LOWER_LIMIT = 7
+  UPPER_LIMIT = 12
 
   def self.is?
-    7..12
+    LOWER_LIMIT..UPPER_LIMIT
   end
 
 end
 
 class Youth
   NAME = 'youth'
+  LOWER_LIMIT = 13
+  UPPER_LIMIT = 18
 
   def self.is?
-    13..18
+    LOWER_LIMIT..UPPER_LIMIT
   end
 
 end
 
 class Adult
   NAME = 'adult'
+  LOWER_LIMIT = 13
+  UPPER_LIMIT = Float::INFINITY
 
   def self.is?
-    19...Float::INFINITY
+    LOWER_LIMIT..UPPER_LIMIT
   end
 
 end
