@@ -1,56 +1,39 @@
-class Baby
+class AgeCategory
+
+  def self.is?
+    self::LOWER_LIMIT..self::UPPER_LIMIT
+  end
+
+end
+
+class Baby < AgeCategory
   NAME = 'baby'
   LOWER_LIMIT = 0
   UPPER_LIMIT = 2
-
-  def self.is?
-    LOWER_LIMIT..UPPER_LIMIT
-  end
-
 end
 
-class LittleChild
+class LittleChild < AgeCategory
   NAME = 'little child'
   LOWER_LIMIT = 3
   UPPER_LIMIT = 6
-
-  def self.is?
-    LOWER_LIMIT..UPPER_LIMIT
-  end
-
 end
 
-class Child
+class Child < AgeCategory
   NAME = 'child'
   LOWER_LIMIT = 7
   UPPER_LIMIT = 12
-
-  def self.is?
-    LOWER_LIMIT..UPPER_LIMIT
-  end
-
 end
 
-class Youth
+class Youth < AgeCategory
   NAME = 'youth'
   LOWER_LIMIT = 13
   UPPER_LIMIT = 18
-
-  def self.is?
-    LOWER_LIMIT..UPPER_LIMIT
-  end
-
 end
 
-class Adult
+class Adult < AgeCategory
   NAME = 'adult'
   LOWER_LIMIT = 13
   UPPER_LIMIT = Float::INFINITY
-
-  def self.is?
-    LOWER_LIMIT..UPPER_LIMIT
-  end
-
 end
 
 class CategorizeByAge
