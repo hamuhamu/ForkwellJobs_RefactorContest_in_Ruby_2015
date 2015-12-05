@@ -4,7 +4,7 @@ class AgeCategory
     self::NAME
   end
 
-  def self.is?
+  def self.fromTo
     self::LOWER_LIMIT..self::UPPER_LIMIT
   end
 
@@ -50,15 +50,15 @@ class CategorizeByAge
   def get
 
     case @age
-    when Baby.is?
+    when Baby.fromTo
       Baby.name
-    when LittleChild.is?
+    when LittleChild.fromTo
       LittleChild::NAME
-    when Child.is?
+    when Child.fromTo
       Child.name
-    when Youth.is?
+    when Youth.fromTo
       Youth.name
-    when Adult.is?
+    when Adult.fromTo
       Adult.name
     end
   end
