@@ -6,13 +6,14 @@ class ClassificationByAge
   end
 
   def get
-    if 0 <= @age && @age <= 2
+    case @age
+    when 0..2
       'baby'
-    elsif 3 <= @age && @age <= 6
+    when 3..6
       'little child'
-    elsif 7 <= @age && @age <= 12
+    when 7..12
       'child'
-    elsif 13 <= @age && @age <= 18
+    when 13..18
       'youth'
     else
       'adult'
