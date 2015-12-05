@@ -1,0 +1,2 @@
+# ForkwellJobs_RefactorContest_in_Ruby_2015
+Forkwell Jobsで開催されたリファクタリングコンテスト
